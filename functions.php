@@ -10,7 +10,13 @@ ini_set('xdebug.var_display_max_data', '-1');*/
 /* ================================================================================================ */
 /*                                  WP Plugin Update Server                                         */
 /* ================================================================================================ */
+require_once get_stylesheet_directory() . '/lib/wp-package-updater/class-wp-package-updater.php';
 
+$abstract_child = new WP_Package_Updater(
+	'https://wp.kyser.dev',
+	wp_normalize_path( __FILE__ ),
+	get_stylesheet_directory()
+);
 
 /* ================================================================================================ */
 
