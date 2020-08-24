@@ -37,7 +37,6 @@ All css or js files placed in those two respective directories will be globally 
 Example: a folder named single-post-event, will load the css and js subfolders on http://{your-site}.tld/event/{title}*
 
 *For any other conditional use case where you need to enqueue specific css or js files, the conditions.php file will allow you to declare parameters and corresponding files to load.*
-
 **Feature coming**
 
 
