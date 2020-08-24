@@ -4,26 +4,26 @@
 The child theme is the centerpiece. This is what you’ll actually use for development. Thanks to the powerful auto_loader class we’ve written, every directory in the theme not only has a purpose, but everything inside these folders is loaded, enqueued, or otherwise hooked in exactly the way that you’d expect based on the name automatically.
 
 ## Beautiful organization and structure to your development. 
--Abstract Child Theme
-—API: wp-rest api handlers
-—acfe-php: acfe php auto sync
-—assets: media
-—classes: php classes
-—css: global stylesheets
-—js: global javascript files
-—conditional: conditional resources
-—settings: wp admin config
-—models: cpt or other data layers
-—elements: Abstract UI elements
-—components: Reusable template parts
-—library: ACF block declarations
-—controllers: page/post/form operations
-—tasks: general php operations
-—templates: page/post templates
-—lib: thirdparty dependancies
--default templates
--style.css
--functions.php
+
+— API: wp-rest api handlers
+— acfe-php: acfe php auto sync
+— assets: media
+— classes: php classes
+— css: global stylesheets
+— js: global javascript files
+— conditional: conditional resources
+— settings: wp admin config
+— models: cpt or other data layers
+— elements: Abstract UI elements
+— components: Reusable template parts
+— library: ACF block declarations
+— controllers: page/post/form operations
+— tasks: general php operations
+— templates: page/post templates
+— lib: thirdparty dependancies
+- default templates
+- style.css
+- functions.php
 
 
 
