@@ -33,11 +33,12 @@ There are three folders covering these frontend resources; css, js, and conditio
 
 All css or js files placed in those two respective directories will be globally enqueued. 
 
-*Within the conditional directory, you can create subfolders named after a custom post type slug or a page slug and within that folder create two subfolders, js and css, and any css or js you place in those folders will be enqueued only on those pages or post types.
-Example: a folder named single-post-event, will load the css and js subfolders on http://{your-site}.tld/event/{title}*
+Within the conditional directory, you can create subfolders named after a template file and within that folder create two subfolders, js and css, and any css or js you place in those folders will be enqueued only on those pages or post types that use that template.
+Example: ```mason_grid/css/grid.css``` will be loaded on any page that uses the ```mason_grid.php wordpress template file```
 
-*For any other conditional use case where you need to enqueue specific css or js files, the conditions.php file will allow you to declare parameters and corresponding files to load.*
-**Feature coming**
+
+~~For any other conditional use case where you need to enqueue specific css or js files, the conditions.php file will allow you to declare parameters and corresponding files to load.~~
+*in progress*
 
 
 ## The Block Mindset
