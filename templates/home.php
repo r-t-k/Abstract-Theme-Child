@@ -6,31 +6,42 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
+//declare and configure components
+$com_side_nav                        = new \Abs\SideNav();
+$com_side_nav->root_classes = 'tm_side_menu uk-flex'; //space after each class, like the html class="" attribute.
+$com_side_nav->config = [
+	'width' => '350px',
+	'sideNavMenu' => [
+		'top_level_repeater'    => 'side_nav',
+		'top_level_link_field'  => 'item',
+		'top_level_label_field' => 'item_label'
+	]
+];
+
+//set component config
 
 ?>
+<div id="tm_header">
+
+</div>
+
+	<?php $com_side_nav->instance(); ?>
+
 <main id="main" class="site-main" role="main">
 
-	<div class="page-content">
+	<?php
+	while ( have_posts() ) : the_post();
 
-		<?php
-		while ( have_posts() ) : the_post();
-
-			?>
-			<article id="post-<?php the_ID(); ?>" class="entry">
-				<header class="entry-header">
-					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-				</header>
-
-				<div class="entry-content">
-					<?php the_content(); ?>
-				</div>
-			</article>
-
-		<?php
-
-		endwhile;
 		?>
-	</div>
+		<div class="content-wrap">
+			<?php //the_content(); ?>
+		</div>
+
+	<?php
+
+	endwhile;
+	?>
+
 </main>
 
 
