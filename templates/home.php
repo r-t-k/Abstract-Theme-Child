@@ -35,6 +35,7 @@ $com_side_nav->config = [
 		?>
 		<div class="content-wrap">
 			<?php //the_content(); ?>
+
 		</div>
 
 	<?php
