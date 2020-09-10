@@ -25,8 +25,10 @@ require_once get_template_directory() . '/vendor/autoload.php';
 use MatthiasMullie\Minify;
 $minifier = new Minify\CSS();
 $JSminifier = new Minify\JS();
-$abstract_parent_version = 0.5;
-$abstract_dev = false; // env setting, true for dev, false for production
+$abstract_child_version = 0.54; //abstract child theme version
+$theme_version = null; // set your theme version
+$theme_ver = $theme_version . '-'.  mt_rand(); //use this for passing your version number, includes random number to cache bust.
+$abstract_dev = true; // env setting, true for dev, false for production
 /* ================================================================================================ */
 //loader
 

@@ -22,6 +22,11 @@ function load_conditional_assets() {
 	global $abstract_dev;
 	global $minifier;
 	global $JSminifier;
+	global $theme_ver, $abstract_child_version;
+	$ver = $theme_ver;
+	if ( $theme_ver == null ) {
+		$ver = $abstract_child_version;
+	}
 	$data = cond_load_by_template();
 	if ( $data['template'] != '' ) {
 		$dirCSS = new \DirectoryIterator( get_stylesheet_directory() . '/conditional/' . $data['template'] . '/css/' );
@@ -38,7 +43,7 @@ function load_conditional_assets() {
 					$style_dir    = get_stylesheet_directory() . '/conditional/' . $data['template'] . '/css/' . $name_and_ext;
 					$minifier->add( $style_dir );
 					if ( $abstract_dev === true ) {
-						wp_enqueue_style( $name, $style_uri );
+						wp_enqueue_style( $name, $style_uri, null, $ver );
 					}
 
 				}
@@ -54,7 +59,7 @@ function load_conditional_assets() {
 					$script_dir   = get_stylesheet_directory_uri() . '/conditional/' . $data['template'] . '/js/' . $name_and_ext;
 					$JSminifier->add( $script_dir );
 					if ( $abstract_dev === true ) {
-						wp_enqueue_script( $name, $script_uri );
+						wp_enqueue_script( $name, $script_uri, null, $ver  );
 					}
 
 				}
